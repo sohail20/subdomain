@@ -7,6 +7,7 @@ export default function App(props) {
 
 export async function getServerSideProps(context) {
   let wildcard = context.req.headers.host.split(".")[0];
+  console.log("wildcard", wildcard)
   if (!wildcard) {
     wildcard = "home"; // Set a default value for the wildcard if it's not present in the request headers
   } else {
